@@ -2,13 +2,10 @@ import React, { useState } from "react";
 import { Box, Heading, Text, Image, Button, Stack, Input, Select, Flex, Spacer, Link, useToast } from "@chakra-ui/react";
 import { FaShoppingCart, FaInfoCircle, FaEnvelope } from "react-icons/fa";
 import PriceCalculator from "../components/PriceCalculator";
-import AddOns from "../components/AddOns";
 
 const Index = () => {
   const [quantity, setQuantity] = useState(1);
   const [region, setRegion] = useState("national");
-  const [rawHoney, setRawHoney] = useState(false);
-  const [condensedMilk, setCondensedMilk] = useState(false);
   const toast = useToast();
 
   const handleOrder = () => {
@@ -17,9 +14,7 @@ const Index = () => {
       description: (
         <>
           <Text>
-            You have pre-ordered {quantity} units of honeybush tea for {region} delivery
-            {rawHoney && " with raw honey"}
-            {condensedMilk && " and condensed milk"}.
+            You have pre-ordered {quantity} units of honeybush tea for {region} delivery.
           </Text>
           <Text mt={4}>Please make a 50% deposit to secure your order:</Text>
           <Text fontWeight="bold">Bank: Creec International Bank</Text>
@@ -81,8 +76,7 @@ const Index = () => {
           <Text fontSize="sm" color="gray.500">
             Pricing: National - $10/unit | International - $15/unit
           </Text>
-          <AddOns rawHoney={rawHoney} setRawHoney={setRawHoney} condensedMilk={condensedMilk} setCondensedMilk={setCondensedMilk} />
-          <PriceCalculator quantity={quantity} region={region} pricePerUnit={region === "national" ? 10 : 15} rawHoney={rawHoney} condensedMilk={condensedMilk} />
+          <PriceCalculator quantity={quantity} region={region} pricePerUnit={region === "national" ? 10 : 15} />
         </Box>
 
         <Box id="about">

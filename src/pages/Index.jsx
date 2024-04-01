@@ -43,7 +43,7 @@ const Index = () => {
           <Heading as="h2" size="xl" marginTop={4}>
             Honeybush Tea
           </Heading>
-          <Text fontSize="xl">Discover the delightful taste and health benefits of our premium honeybush tea. Sourced from the finest regions, our tea offers a naturally sweet and soothing experience.</Text>
+          <Text fontSize="xl">Indulge in the exquisite taste and remarkable health benefits of our premium honeybush tea. Meticulously sourced from the finest regions, our tea offers a naturally sweet and soothing experience that elevates your well-being. Crafted with utmost care and expertise, each cup is a luxurious escape from the ordinary.</Text>
         </Box>
 
         <Box>
@@ -71,6 +71,18 @@ const Index = () => {
             About Us
           </Heading>
           <Text>At Creec, we are passionate about delivering the finest honeybush tea to businesses worldwide. With our commitment to quality and sustainability, we strive to provide an exceptional tea experience for your customers.</Text>
+          <Box marginTop={4}>
+            <Heading as="h4" size="md">
+              Our Sourcing and Production Process
+            </Heading>
+            <Text>We carefully select the best honeybush leaves from trusted farmers who share our dedication to sustainable practices. Our state-of-the-art production facility ensures that each batch of tea is processed with precision and care, preserving the natural goodness and flavor of the honeybush plant.</Text>
+          </Box>
+          <Box marginTop={4}>
+            <Heading as="h4" size="md">
+              What Our Customers Say
+            </Heading>
+            <Text fontStyle="italic">"Creec's honeybush tea is simply exquisite. The flavor is unmatched, and I feel great knowing that I'm serving a premium, healthy product to my customers." - John D., Cafe Owner</Text>
+          </Box>
         </Box>
 
         <Box id="contact">

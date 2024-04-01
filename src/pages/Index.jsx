@@ -9,12 +9,22 @@ const Index = () => {
   const toast = useToast();
 
   const handleOrder = () => {
-    // TODO: Implement order submission logic
     toast({
-      title: "Order Submitted",
-      description: `You have pre-ordered ${quantity} units of honeybush tea for ${region} delivery.`,
+      title: "Pre-Order Submitted",
+      description: (
+        <>
+          <Text>
+            You have pre-ordered {quantity} units of honeybush tea for {region} delivery.
+          </Text>
+          <Text mt={4}>Please make a 50% deposit to secure your order:</Text>
+          <Text fontWeight="bold">Bank: Creec International Bank</Text>
+          <Text fontWeight="bold">Account Number: 1234 5678 9012 3456</Text>
+          <Text fontWeight="bold">Routing Number: 123456789</Text>
+          <Text mt={4}>Once your deposit is received, we will confirm your pre-order and provide an estimated delivery date.</Text>
+        </>
+      ),
       status: "success",
-      duration: 5000,
+      duration: null,
       isClosable: true,
     });
   };
@@ -52,6 +62,7 @@ const Index = () => {
             Pre-Order Now
           </Heading>
           <Text>Show your interest in our honeybush tea by pre-ordering now. Your pre-order helps us gauge demand and prepare for full-scale production.</Text>
+          <Text mt={4}>Our pre-order process is simple and secure. Just select your desired quantity and delivery region, then click "Pre-Order". You'll receive instructions to make a 50% deposit to our company bank account. Once your deposit is received, we'll confirm your pre-order and keep you updated on the production progress.</Text>
           <Stack direction="row" align="center" marginTop={4}>
             <Input type="number" value={quantity} onChange={(e) => setQuantity(parseInt(e.target.value))} width="100px" />
             <Select value={region} onChange={(e) => setRegion(e.target.value)} width="200px">

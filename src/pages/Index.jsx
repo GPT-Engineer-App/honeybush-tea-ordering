@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Box, Heading, Text, Image, Button, Stack, Input, Select, Flex, Spacer, Link, useToast } from "@chakra-ui/react";
 import { FaShoppingCart, FaInfoCircle, FaEnvelope } from "react-icons/fa";
+import PriceCalculator from "../components/PriceCalculator";
 
 const Index = () => {
   const [quantity, setQuantity] = useState(1);
@@ -61,9 +62,10 @@ const Index = () => {
               Pre-Order
             </Button>
           </Stack>
-          <Text fontSize="sm" color="gray.500" marginTop={2}>
+          <Text fontSize="sm" color="gray.500">
             Pricing: National - $10/unit | International - $15/unit
           </Text>
+          <PriceCalculator quantity={quantity} region={region} pricePerUnit={region === "national" ? 10 : 15} />
         </Box>
 
         <Box id="about">

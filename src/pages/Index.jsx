@@ -74,9 +74,9 @@ const Index = () => {
             </Button>
           </Stack>
           <Text fontSize="sm" color="gray.500">
-            Pricing: National - $10/unit | International - $15/unit
+            Pricing: 100 ZAR/EUR per unit
           </Text>
-          <PriceCalculator quantity={quantity} region={region} pricePerUnit={region === "national" ? 10 : 15} />
+          <PriceCalculator quantity={quantity} pricePerUnit={100} />
         </Box>
 
         <Box id="about">

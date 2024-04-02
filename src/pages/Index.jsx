@@ -9,6 +9,7 @@ const Index = () => {
   const [region, setRegion] = useState("national");
   const [rawHoney, setRawHoney] = useState(false);
   const [condensedMilk, setCondensedMilk] = useState(false);
+  const [email, setEmail] = useState("");
   const toast = useToast();
 
   const handleOrder = () => {
@@ -83,6 +84,7 @@ const Index = () => {
           </Text>
           <AddOns rawHoney={rawHoney} setRawHoney={setRawHoney} condensedMilk={condensedMilk} setCondensedMilk={setCondensedMilk} />
           <PriceCalculator quantity={quantity} region={region} pricePerUnit={region === "national" ? 10 : 15} rawHoney={rawHoney} condensedMilk={condensedMilk} />
+          <Input type="email" placeholder="Enter your email" value={email} onChange={(e) => setEmail(e.target.value)} marginTop={4} />
         </Box>
 
         <Box id="about">
